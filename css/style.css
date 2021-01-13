@@ -35,6 +35,7 @@ li{
 }
 main {
     width: 960px;
+    height: 1300px;
     margin: auto;
     padding: 30px;
 }
@@ -44,6 +45,7 @@ main>img{
     margin-right: auto;
 }
 main>div{
+    position: relative;
     display:block;
     width: 100%;
     margin-top: 30px;
@@ -52,17 +54,33 @@ main>div{
     margin-right: auto;
 }
 div>img{
-    display: inline;
+    display: block;
+    /* float: left; */
     padding-left: 0px;
-    padding-right: 27px;
+    padding-right: 30px;
+}
+div>img:first-child{
+    float:left;
 }
 div>img:last-child{
+    position: absolute;
+    display: block;
+    float: right;
+    top:0px;
+    right: 0px;
     padding-right: 0px;
+}
+#section{
+    position:relative;
+    display: block;
+}
+#section>img{
+    display: inline;
+    float: none;
 }
 div>div{
     display: block;
     float: right;
-    /* border: 3px solid black; */
     height: 400px;
     width: 450px;
 }
@@ -95,6 +113,7 @@ h4:hover{
     background-color: rgb(44, 44, 44);
 }
 footer{
+    position: relative;
     height: 100px;
     background-color: grey;
     bottom: 0px;
